@@ -1,5 +1,5 @@
 import tabula
-from zipfile import *
+from zipfile import ZipFile
 
 
 def extract_table(file: str, pages: str, area: tuple) -> list:
@@ -8,10 +8,12 @@ def extract_table(file: str, pages: str, area: tuple) -> list:
 
 
 def convert_to_csv(l: list, name: str) -> None:
-    l[0].to_csv(f"{name}.csv", index=False)
+    print("Convertendo tabelas para csv...")
+    l.to_csv(f"{name}.csv", index=False)
 
 
 def create_zip(file1: str, file2: str, file3: str) -> None:
+    print("Criando arquivo zip...")
     with ZipFile("Teste_Gabriel_Cardoso.zip", "w") as zip:
         zip.write(f"{file1}.csv")
         zip.write(f"{file2}.csv")
