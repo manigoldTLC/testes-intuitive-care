@@ -1,0 +1,39 @@
+-- operadoras que tiveram mais despesas no ultimo trimestre de 2019
+
+SELECT *
+FROM TABLE_2019
+WHERE DESCRICAO ~ '^(EVENTOS/).*(MEDICO HOSPITALAR)'
+	AND DATA >= '2019-10-01'
+	AND DATA < '2019-12-31'
+	AND VL_SALDO_FINAL < 0
+ORDER BY VL_SALDO_FINAL ASC
+LIMIT 10;
+
+-- operadoras que tiveram mais despesas no ultimo trimestre de 2020
+
+SELECT *
+FROM TABLE_2020
+WHERE DESCRICAO ~ '^(EVENTOS/).*(MEDICO HOSPITALAR)'
+	AND DATA >= '2020-10-01'
+	AND DATA < '2020-12-31'
+	AND VL_SALDO_FINAL < 0
+ORDER BY VL_SALDO_FINAL ASC
+LIMIT 10;
+
+-- operadoras que mais tiveram despesas no ano de 2019
+
+SELECT *
+FROM TABLE_2019
+WHERE DESCRICAO ~ '^(EVENTOS/).*(MEDICO HOSPITALAR)'
+	AND VL_SALDO_FINAL < 0
+ORDER BY VL_SALDO_FINAL ASC
+LIMIT 10;
+
+-- operadoras que mais tiveram despesas no ano de 2020
+
+SELECT *
+FROM TABLE_2020
+WHERE DESCRICAO ~ '^(EVENTOS/).*(MEDICO HOSPITALAR)'
+	AND VL_SALDO_FINAL < 0
+ORDER BY VL_SALDO_FINAL ASC
+LIMIT 10;

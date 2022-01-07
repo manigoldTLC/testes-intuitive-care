@@ -37,7 +37,7 @@ def tranform_dataframe(data_files: list) -> list:
 
 def convert_to_csv(l: list, name: str) -> None:
     print("Convertendo dataframe para csv...")
-    l.to_csv(f"tmp/{name}.csv", index=False, encoding="windows-1252")
+    l.to_csv(f"full_tables/{name}.csv", index=False, encoding="utf-8")
 
 
 def sql_query(cursor, sql):
