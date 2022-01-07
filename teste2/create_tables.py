@@ -16,6 +16,7 @@ params_create_tables = [
     }
 ]
 
+# extraindo tabelas do pdf
 table30 = [
     utils.extract_table(file, params["table30"]["pages"], params["table30"]["areas"])
     for params in params_create_tables
