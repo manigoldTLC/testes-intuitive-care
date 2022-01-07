@@ -1,0 +1,2 @@
+baixar e extrair nesta pasta os arquivos 1T2019.csv, ... , 4T2019.csv referentes ao ano de 2019 presentes no link
+http://ftp.dadosabertos.ans.gov.br/FTP/PDA/demonstracoes_contabeis/ 

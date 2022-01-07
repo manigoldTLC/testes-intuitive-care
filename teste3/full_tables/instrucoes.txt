@@ -1,0 +1,2 @@
+para tudo funcionar corretamente, os arquivos full_table_2019.csv e full_table_2020.csv
+deverão ficar aqui
