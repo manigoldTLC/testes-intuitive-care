@@ -3,6 +3,7 @@ import pandas as pd
 
 file = "file_download.pdf"
 
+# parametros para extrair tabelas do pdf
 params_create_tables = [
     {"pages": "114", "areas": (295.625, 137.138, 376.689, 320.088)},
     {"pages": "115", "areas": (143.167, 131.932, 746.308, 468.085)},

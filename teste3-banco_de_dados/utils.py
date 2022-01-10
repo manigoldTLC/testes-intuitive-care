@@ -2,6 +2,15 @@ import pandas as pd
 
 
 def create_dataframe(files: list) -> list:
+    """
+    Transforma arquivos csv em dataframe.
+
+    Args:
+        files: Lista contendo os arquivos csv.
+
+    Returns:
+        Retorna uma lista de dataframes.
+    """
     print("Criando dataframe...")
     return [
         pd.read_csv(file, encoding="windows-1252", engine="python", delimiter=";")
@@ -10,6 +19,16 @@ def create_dataframe(files: list) -> list:
 
 
 def tranform_dataframe(data_files: list) -> list:
+    """
+    Fazer algumas alterações em dataframes, como: nomear colunas e transformar algumas
+    colunas para o tipo numérico.
+
+    Args:
+        data_files: Lista contendo os arquivos a serem transformados.
+
+    Returns:
+        Retorna uma lista de dataframes com algumas alterações.
+    """
     print("Transformando dataframe...")
 
     list_clean_dataframes = []
@@ -36,11 +55,15 @@ def tranform_dataframe(data_files: list) -> list:
 
 
 def convert_to_csv(l: list, name: str) -> None:
+    """
+    Transformar tabela pandas em um arquivo csv.
+
+    Args:
+        l: Lista contendo as tabelas a serem transformadas.
+        name: string para nomear o arquivo csv gerado.
+
+    Returns:
+        Função sem retorno.
+    """
     print("Convertendo dataframe para csv...")
     l.to_csv(f"full_tables/{name}.csv", index=False, encoding="utf-8")
-
-
-def sql_query(cursor, sql):
-    cursor.execute(sql)
-    result = cursor.fetchall()
-    return result
