@@ -15,5 +15,3 @@ def download_pdf(url: str) -> None:
     with open("file_download.pdf", "wb") as file:
         file.write(response.read())
         print("\n\nDowload feito com sucesso!")
-
-print(download_pdf.__doc__)
